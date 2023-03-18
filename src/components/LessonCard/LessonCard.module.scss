@@ -1,0 +1,71 @@
+@import "../../styles/variables.scss";
+
+.lesson {
+  width: 500px;
+  margin: 0 auto;
+  background-color: $primary;
+  padding: 15px 10px;
+  margin: 30px;
+
+  border: 2px solid $secondary;
+  border-radius: 15px;
+  font-family: "Comfortaa", sans-serif;
+
+  cursor: pointer;
+  transition: 300ms all;
+
+  &:hover {
+    // transform: scale(1.01);
+    background-color: $black;
+    border-color: $accent;
+  }
+
+  &:hover > .lesson__image {
+    border-color: $secondary;
+  }
+
+  &__image {
+    width: 100%;
+    border: 2px solid $accent;
+    border-radius: 15px;
+    transition: 300ms all;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 5px;
+  }
+
+  &__text_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__info {
+    text-align: center;
+
+
+    &--lessons {
+      color: $accent;
+    }
+    &--skills {
+      color: $accent;
+    }
+    &--rating {
+      color: $accent;
+    }
+
+    &--red {
+      color: $secondary;
+    }
+    &--yellow {
+      color: #FFDD83;
+    }
+    &--green {
+      color: #5D9C59;
+    }
+  }
+}
