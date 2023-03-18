@@ -27,8 +27,8 @@ const CourseCard = ({ data }) => {
               data.lessonsCount >= 10
                 ? styles["card__info--red"]
                 : data.rating >= 5
-                ? styles["card__info--yellow"]
-                : styles["card__info--green"]
+                  ? styles["card__info--yellow"]
+                  : styles["card__info--green"]
             )}
           >
             {data.lessonsCount}
@@ -40,8 +40,8 @@ const CourseCard = ({ data }) => {
               data.rating >= 4
                 ? styles["card__info--green"]
                 : data.rating >= 2.5
-                ? styles["card__info--yellow"]
-                : styles["card__info--red"]
+                  ? styles["card__info--yellow"]
+                  : styles["card__info--red"]
             )}
           >
             {data.rating}
@@ -51,12 +51,12 @@ const CourseCard = ({ data }) => {
         {data.meta.skills.map((skill, i, { length }) => {
           if (length - 1 === i) {
             return (
-              <span className={styles["card__info--skills"]}>{skill}</span>
+              <span key={i} className={styles["card__info--skills"]}>{skill}</span>
             );
           }
 
           return (
-            <span className={styles["card__info--skills"]}>{skill}, </span>
+            <span key={i} className={styles["card__info--skills"]}>{skill}, </span>
           );
         })}
       </div>
